@@ -2,7 +2,7 @@ package parseTree.nodeTypes;
 
 import parseTree.ParseNode;
 import parseTree.ParseNodeVisitor;
-import logging.PikaLogger;
+import logging.BilbyLogger;
 import symbolTable.Binding;
 import symbolTable.Scope;
 import tokens.IdentifierToken;
@@ -78,7 +78,7 @@ public class FunctionInvocationNode extends ParseNode {
 		return declarationScope;
 	}
 	public void useBeforeDefineError() {
-		PikaLogger log = PikaLogger.getLogger("compiler.semanticAnalyzer.identifierNode");
+		BilbyLogger log = BilbyLogger.getLogger("compiler.semanticAnalyzer.identifierNode");
 		Token token = getToken();
 		log.severe("identifier " + token.getLexeme() + " used before defined at " + token.getLocation());
 	}

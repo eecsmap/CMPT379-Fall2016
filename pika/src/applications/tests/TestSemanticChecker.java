@@ -11,7 +11,7 @@ import parseTree.ParseTreePrinter.Level;
 
 import tests.FileFixturesTestCase;
 import tokens.Tokens;
-import applications.PikaSemanticChecker;
+import applications.BilbySemanticChecker;
 
 public class TestSemanticChecker extends FileFixturesTestCase {
 	public void testSemanticChecker() throws Exception {
@@ -36,7 +36,7 @@ public class TestSemanticChecker extends FileFixturesTestCase {
 		}
 
 		public void run(PrintStream out) throws FileNotFoundException {
-			PikaSemanticChecker.checkFileSemantics(filename, out);
+			BilbySemanticChecker.checkFileSemantics(filename, out);
 		}
 	}
 }

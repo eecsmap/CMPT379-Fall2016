@@ -5,7 +5,7 @@ import inputHandler.InputHandler;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
-public class NumberedFileLister extends PikaApplication {
+public class NumberedFileLister extends BilbyApplication {
 	private static InputHandler handler;
 
 	/** Lists a file with line-number prefixes.

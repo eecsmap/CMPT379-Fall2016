@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import logging.PikaLogger;
+import logging.BilbyLogger;
 import parseTree.*;
 import parseTree.nodeTypes.*;
 import semanticAnalyzer.types.*;
@@ -1293,7 +1293,7 @@ public class Parser {
 		error(message);
 	}
 	private void error(String message) {
-		PikaLogger log = PikaLogger.getLogger("compiler.Parser");
+		BilbyLogger log = BilbyLogger.getLogger("compiler.Parser");
 		log.severe("syntax error: " + message);
 	}	
 }

@@ -5,7 +5,7 @@ import inputHandler.InputHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-import logging.PikaLogger;
+import logging.BilbyLogger;
 
 public class ASMCodeFragment {
 	private List<ASMCodeChunk> chunks;
@@ -197,7 +197,7 @@ public class ASMCodeFragment {
 	}
 	
 	private static void error(String message) {
-		PikaLogger log = PikaLogger.getLogger("compiler.Optimizer");
+		BilbyLogger log = BilbyLogger.getLogger("compiler.Optimizer");
 		log.severe("read error: " + message);
 	}	
 }

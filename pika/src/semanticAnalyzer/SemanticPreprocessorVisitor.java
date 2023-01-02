@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import asmCodeGenerator.codeStorage.ASMOpcode;
 import lexicalAnalyzer.Keyword;
-import logging.PikaLogger;
+import logging.BilbyLogger;
 import parseTree.ParseNode;
 import parseTree.ParseNodeVisitor;
 import parseTree.nodeTypes.*;
@@ -211,7 +211,7 @@ class SemanticPreprocessorVisitor extends ParseNodeVisitor.Default {
 	///////////////////////////////////////////////////////////////////////////
 	// error logging/printing
 	private void logError(String message) {
-		PikaLogger log = PikaLogger.getLogger("compiler.semanticAnalyzer");
+		BilbyLogger log = BilbyLogger.getLogger("compiler.semanticAnalyzer");
 		log.severe(message);
 	}
 }

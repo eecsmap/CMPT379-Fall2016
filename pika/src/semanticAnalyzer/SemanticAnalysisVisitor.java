@@ -15,7 +15,7 @@ import asmCodeGenerator.codeGenerator.string.StringReverseSCG;
 import lexicalAnalyzer.Keyword;
 import lexicalAnalyzer.Lextant;
 import lexicalAnalyzer.Punctuator;
-import logging.PikaLogger;
+import logging.BilbyLogger;
 import parseTree.ParseNode;
 import parseTree.ParseNodeVisitor;
 import parseTree.nodeTypes.*;
@@ -832,7 +832,7 @@ class SemanticAnalysisVisitor extends ParseNodeVisitor.Default {
 		node.setType(PrimitiveType.ERROR);
 	}
 	private void logError(String message) {
-		PikaLogger log = PikaLogger.getLogger("compiler.semanticAnalyzer");
+		BilbyLogger log = BilbyLogger.getLogger("compiler.semanticAnalyzer");
 		log.severe(message);
 	}
 }

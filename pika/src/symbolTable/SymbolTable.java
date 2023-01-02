@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import logging.PikaLogger;
+import logging.BilbyLogger;
 
 import tokens.Token;
 
@@ -50,7 +50,7 @@ public class SymbolTable {
 		}
 	}
 	protected static void multipleDefinitionError(Token token) {
-		PikaLogger log = PikaLogger.getLogger("compiler.symbolTable");
+		BilbyLogger log = BilbyLogger.getLogger("compiler.symbolTable");
 		log.severe("variable \"" + token.getLexeme() + 
 				          "\" multiply defined at " + token.getLocation());
 	}

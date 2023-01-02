@@ -11,7 +11,7 @@ import parseTree.ParseTreePrinter;
 import parseTree.ParseTreePrinter.Level;
 
 import tests.FileFixturesTestCase;
-import applications.PikaAbstractSyntaxTree;
+import applications.BilbyAbstractSyntaxTree;
 
 public class TestAbstractSyntaxTree extends FileFixturesTestCase {
 
@@ -40,7 +40,7 @@ public class TestAbstractSyntaxTree extends FileFixturesTestCase {
 		}
 
 		public void run(PrintStream out) throws FileNotFoundException {
-			PikaAbstractSyntaxTree.parseFileToAST(filename, out);
+			BilbyAbstractSyntaxTree.parseFileToAST(filename, out);
 		}
 	}
 }

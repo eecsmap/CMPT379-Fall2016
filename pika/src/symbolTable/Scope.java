@@ -1,7 +1,7 @@
 package symbolTable;
 
 import inputHandler.TextLocation;
-import logging.PikaLogger;
+import logging.BilbyLogger;
 import parseTree.nodeTypes.IdentifierNode;
 import semanticAnalyzer.types.Type;
 import tokens.Token;
@@ -179,7 +179,7 @@ public class Scope {
 ///////////////////////////////////////////////////////////////////////
 //error reporting
 	private static void unscopedIdentifierError(Token token) {
-		PikaLogger log = PikaLogger.getLogger("compiler.scope");
+		BilbyLogger log = BilbyLogger.getLogger("compiler.scope");
 		log.severe("variable " + token.getLexeme() + 
 				" used outside of any scope at " + token.getLocation());
 	}

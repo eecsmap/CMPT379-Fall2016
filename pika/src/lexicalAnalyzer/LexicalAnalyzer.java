@@ -1,7 +1,7 @@
 package lexicalAnalyzer;
 
 
-import logging.PikaLogger;
+import logging.BilbyLogger;
 
 import inputHandler.InputHandler;
 import inputHandler.LocatedChar;
@@ -251,7 +251,7 @@ public class LexicalAnalyzer extends ScannerImp implements Scanner {
 	
 
 	//////////////////////////////////////////////////////////////////////////////
-	// Character-classification routines specific to Pika scanning.	
+	// Character-classification routines specific to Bilby scanning.	
 
 	private boolean isPunctuatorStart(LocatedChar lc) {
 		char c = lc.getCharacter();
@@ -267,11 +267,11 @@ public class LexicalAnalyzer extends ScannerImp implements Scanner {
 	// Error-reporting	
 
 	private void lexicalError(LocatedChar ch) {
-		PikaLogger log = PikaLogger.getLogger("compiler.lexicalAnalyzer");
+		BilbyLogger log = BilbyLogger.getLogger("compiler.lexicalAnalyzer");
 		log.severe("Lexical error: invalid character " + ch);
 	}
 	private void lexicalErrorWithIdentifier(String lexeme) {
-		PikaLogger log = PikaLogger.getLogger("compiler.lexicalAnalyzer");
+		BilbyLogger log = BilbyLogger.getLogger("compiler.lexicalAnalyzer");
 		log.severe("Lexical error: variable name '" + lexeme + "' is greater than 32 characters.");
 	}
 	

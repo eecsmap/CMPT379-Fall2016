@@ -7,7 +7,7 @@ import symbolTable.Binding;
 import symbolTable.Scope;
 import lexicalAnalyzer.Keyword;
 import lexicalAnalyzer.Lextant;
-import logging.PikaLogger;
+import logging.BilbyLogger;
 import tokens.LextantToken;
 import tokens.Token;
 
@@ -100,7 +100,7 @@ public class FunctionDefinitionNode extends ParseNode {
 		return parameterScope;
 	}
 	public void useBeforeDefineError() {
-		PikaLogger log = PikaLogger.getLogger("compiler.semanticAnalyzer.functionDefinitionNode");
+		BilbyLogger log = BilbyLogger.getLogger("compiler.semanticAnalyzer.functionDefinitionNode");
 		Token token = getToken();
 		log.severe("functionDefinition " + token.getLexeme() + " used before defined at " + token.getLocation());
 	}

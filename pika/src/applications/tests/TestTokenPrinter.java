@@ -8,7 +8,7 @@ import java.io.PrintStream;
 
 import tests.FileFixturesTestCase;
 import tokens.Tokens;
-import applications.PikaTokenPrinter;
+import applications.BilbyTokenPrinter;
 
 public class TestTokenPrinter extends FileFixturesTestCase {
 
@@ -31,7 +31,7 @@ public class TestTokenPrinter extends FileFixturesTestCase {
 
 		public void run(PrintStream out) throws FileNotFoundException {
 			Tokens.setPrintLevel(Tokens.Level.TYPE_AND_VALUE);
-			PikaTokenPrinter.scanFile(filename, out);
+			BilbyTokenPrinter.scanFile(filename, out);
 		}
 	}
 }
